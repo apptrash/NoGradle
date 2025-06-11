@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
 
-rm -r build/
+rm -rf build/
 
 echo 'Cleaned successfully'
