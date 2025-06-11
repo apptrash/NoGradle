@@ -1,4 +1,4 @@
-package com.example.saferecorder
+package io.github.apptrash
 
 import android.app.Application
 

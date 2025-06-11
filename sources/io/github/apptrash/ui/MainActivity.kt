@@ -1,4 +1,4 @@
-package com.example.saferecorder.ui
+package io.github.apptrash.ui
 
 import android.os.Bundle
 import android.app.Activity
@@ -8,7 +8,7 @@ import android.widget.FrameLayout
 import android.view.View
 import android.view.Gravity
 import android.graphics.Color
-import com.example.saferecorder.R
+import io.github.apptrash.R
 
 class MainActivity : Activity() {
 

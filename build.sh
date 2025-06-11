@@ -10,7 +10,7 @@ export BUILD_TOOLS_VERSION="35.0.1"
 export ANDROID_SDK_PATH="${HOME}/Library/Android/sdk"
 export ANDROID_JAR_PATH="${ANDROID_SDK_PATH}/platforms/android-${TARGET_SDK}/android.jar"
 
-export PACKAGE="com.example.saferecorder"
+export PACKAGE="io.github.apptrash"
 
 PACKAGE_PATH="$(echo ${PACKAGE} | tr '.' '/')"
 export PACKAGE_PATH
