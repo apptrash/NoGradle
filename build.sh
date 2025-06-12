@@ -65,7 +65,7 @@ kotlinc -verbose \
 mkdir -p ${OUTPUT_BUILD_PATH}/dex
 
 # Compile .class to .dex
-"${BUILD_TOOLS_PATH}"/d8 --debug \
+"${BUILD_TOOLS_PATH}"/d8 --release \
  --min-api ${MIN_API} \
  --output ${OUTPUT_BUILD_PATH}/dex \
  --lib "${ANDROID_JAR_PATH}" \
