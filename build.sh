@@ -6,6 +6,8 @@ export TARGET_SDK=35
 export JVM_TARGET=21
 export MIN_API=29
 export BUILD_TOOLS_VERSION="35.0.1"
+export APP_VERSION_CODE=1
+export APP_VERSION_NAME="0.1.0"
 
 export ANDROID_SDK_PATH="${HOME}/Library/Android/sdk"
 export ANDROID_JAR_PATH="${ANDROID_SDK_PATH}/platforms/android-${TARGET_SDK}/android.jar"
@@ -41,6 +43,8 @@ xmlstarlet ed \
     --min-sdk-version "${MIN_API}" \
     --target-sdk-version ${TARGET_SDK} \
     --compile-sdk-version-code ${TARGET_SDK} \
+    --version-code $((APP_VERSION_CODE)) \
+    --version-name ${APP_VERSION_NAME} \
     --java ${OUTPUT_BUILD_PATH}/generated \
     -I "${ANDROID_JAR_PATH}" \
     -o "${OUTPUT_BUILD_PATH}/apk/output.apk" \
@@ -87,7 +91,7 @@ zip -uj ${OUTPUT_BUILD_PATH}/apk/output.apk ${OUTPUT_BUILD_PATH}/dex/classes.dex
 "${BUILD_TOOLS_PATH}"/apksigner sign \
     --in ${OUTPUT_BUILD_PATH}/apk/output-aligned.apk \
     --out ${OUTPUT_BUILD_PATH}/apk/output-signed.apk \
-    --min-sdk-version $((MIN_SDK)) \
+    --min-sdk-version $((MIN_API)) \
     --ks debug-key.keystore \
     --ks-pass pass:no_gradle \
     --key-pass pass:no_gradle
